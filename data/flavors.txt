@@ -7,8 +7,9 @@
 1970s
 1990s
 20 megapixels
+2d
 2d game art
-32k huhd
+32k uhd
 35mm lens
 3840x2160
 3d
@@ -23,9 +24,11 @@ aftereffects
 airbrush art
 ambient occlusion
 american propaganda
+anamorphic lens flare
 androgynous
 angelic photograph
 anime
+anime aesthetic
 apocalypse art
 apocalypse landscape
 art
@@ -55,9 +58,11 @@ charcoal drawing
 chiaroscuro
 childs drawing
 cinematic
+cinematic view
 cityscape
 clean
 cluttered
+colorful
 colorized
 commission for
 concept art
@@ -70,8 +75,10 @@ creepypasta
 criterion collection
 cryengine
 cubism
+d&d
 da vinci
 dark
+dark and mysterious
 darksynth
 datamosh
 dc comics
@@ -86,13 +93,18 @@ digital illustration
 digital painting
 digitally enhanced
 diorama
+dramatic
 dramatic lighting
 dslr
 dslr camera
 dutch golden age
 dye-transfer
+dynamic pose
 dystopian art
 egyptian art
+elegant
+elite
+enchanting
 epic
 ethereal
 extremely gendered
@@ -107,18 +119,26 @@ flat shading
 flemish baroque
 flickering light
 flickr
+full body
+full of details
 furaffinity
 genderless
 geometric
 global illumination
+glorious
 glowing neon
+god rays
+golden ratio
 goth
 groovy
+grotesque
 hall of mirrors
+handsome
 hard surface modeling
 hd
 hd mod
 hdr
+hellish
 henry moore
 high contrast
 high definition
@@ -126,7 +146,9 @@ high detail
 high detailed
 high quality
 high quality photo
+high resolution
 holographic
+hyper realism
 hyper-realistic
 hyperrealism
 ilford hp5
@@ -135,18 +157,26 @@ imax
 impressionism
 infrared
 ink drawing
+inspirational
 instax
 intricate
+intricate patterns
 iridescent
 iso 200
 isometric
 kodak ektar
 kodak gold 200
 kodak portra
+lighthearted
+logo
 lomo
+long lens
+lovecraftian
+lovely
 low contrast
 low poly
 lowbrow
+macabre
 macro
 macro photography
 made of all of the above
@@ -167,9 +197,11 @@ made of trash
 made of vines
 made of wire
 made of wrought iron
+majestic
 marble sculpture
 marvel comics
 masculine
+masterpiece
 matte background
 matte drawing
 matte painting
@@ -177,14 +209,21 @@ matte photo
 maximalist
 messy
 minimalist
+minimalistic
 mist
 mixed media
 movie poster
+movie still
+muted
+mystical
 national geographic photo
+neon
 nightmare
 octane render
+official art
 oil on canvas
 ominous vibe
+outlined art
 outrun
 panorama
 parallax
@@ -211,27 +250,34 @@ post processing
 poster art
 pre-raphaelite
 prerendered graphics
+pretty
 provia
 ps1 graphics
 psychedelic
 quantum wavetracing
+ray tracing
 reimagined by industrial light and magic
 renaissance painting
 rendered in cinema4d
 rendered in maya
 rendered in unreal engine
 retrowave
+rich color palette
 rococo
 rough
 rtx
 rtx on
 sci-fi
 seapunk
+sense of awe
+sensual
+shallow depth of field
 sharp focus
 shot on 70mm
 sketchfab
 skeuomorphic
 smooth
+soft light
 soviet propaganda
 speedpainting
 stained glass
@@ -240,34 +286,45 @@ stipple
 stock photo
 stockphoto
 storybook illustration
+strange
 streetscape
+studio light
 studio lighting
 studio photography
+studio portrait
+stylish
 sunrays shine upon it
 surrealist
 symmetrical
 synthwave
+tarot card
 tattoo
 terragen
 thx sound
 tilt shift
 tintype photograph
 trance compilation cd
+ue5
+uhd image
 ukiyo-e
 ultra detailed
 ultra hd
 ultra realistic
 ultrafine detail
 unreal engine
+unreal engine 5
 vaporwave
 velvia
+vibrant colors
 vivid colors
 volumetric lighting
 voxel art
+vray
 vray tracing
 wallpaper
 watercolor
 wavy
+whimsical
 white background
 wiccan
 wimmelbilder

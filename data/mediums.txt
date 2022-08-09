@@ -3,6 +3,7 @@ a black and white photo
 a bronze sculpture
 a cartoon
 a cave painting
+a character portrait
 a charcoal drawing
 a child's drawing
 a color pencil sketch
@@ -43,9 +44,12 @@ a picture
 a pointillism painting
 a polaroid photo
 a pop art painting
+a portrait
 a poster
 a raytraced image
 a renaissance painting
+a screenprint
+a screenshot
 a silk screen
 a sketch
 a statue
@@ -65,6 +69,7 @@ an abstract painting
 an abstract sculpture
 an acrylic painting
 an airbrush painting
+an album cover
 an ambient occlusion render
 an anime drawing
 an art deco painting

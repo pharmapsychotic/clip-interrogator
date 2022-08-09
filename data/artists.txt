@@ -3138,6 +3138,7 @@ Malevich
 Malvin Gray Johnson
 Man Ray
 Manabu Mabe
+Mandy Jurgens
 Manfredi Beninati
 Manjit Bawa
 Manolo Millares
@@ -4949,6 +4950,7 @@ Zvest Apollonio
 Zygmunt Vogel
 Zygmunt Waliszewski
 amily Circus The
+artist
 arusCarl Gustav Canaletto
 awaseHasui Kawacy
 hirico, Giorgio De
@@ -4958,6 +4960,9 @@ omineAdrian theCHAMBA
 ones, Edward Burne
 organ, Evelyn De
 rickdale, Eleanor Fortescue
+senior artist
+senior character artist
+senior environment artist
 the Brothers Hildebrandt
 wlop
 Ángel Botello

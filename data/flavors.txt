@@ -17,8 +17,10 @@
 8k
 8k 3d
 8k resolution
+I can't believe how beautiful this is
 academic art
 acrylic art
+adafruit
 aesthetic
 aftereffects
 airbrush art
@@ -27,8 +29,10 @@ american propaganda
 anamorphic lens flare
 androgynous
 angelic photograph
+angular
 anime
 anime aesthetic
+antichrist
 apocalypse art
 apocalypse landscape
 art
@@ -44,6 +48,7 @@ award-winning
 backlight
 beautiful
 behance hd
+bioluminescence
 biomorphic
 black and white
 black background
@@ -57,18 +62,25 @@ character
 charcoal drawing
 chiaroscuro
 childs drawing
+chromatic
 cinematic
+cinematic lighting
 cinematic view
+circuitry
 cityscape
 clean
+close up
 cluttered
 colorful
 colorized
 commission for
+complementary colors
 concept art
 concert poster
+congruent
 constructivism
 contest winner
+contrasting
 cosmic horror
 creative commons attribution
 creepypasta
@@ -81,6 +93,7 @@ dark
 dark and mysterious
 darksynth
 datamosh
+daz3d
 dc comics
 demonic photograph
 depth of field
@@ -99,6 +112,7 @@ dslr
 dslr camera
 dutch golden age
 dye-transfer
+dynamic composition
 dynamic pose
 dystopian art
 egyptian art
@@ -119,17 +133,26 @@ flat shading
 flemish baroque
 flickering light
 flickr
+freakshow
 full body
 full of details
 furaffinity
+future tech
+futuristic
 genderless
 geometric
+glitch art
+glitchy
+glitter
 global illumination
 glorious
+glowing lights
 glowing neon
 god rays
 golden ratio
 goth
+gothic
+greeble
 groovy
 grotesque
 hall of mirrors
@@ -139,17 +162,21 @@ hd
 hd mod
 hdr
 hellish
+hellish background
 henry moore
 high contrast
 high definition
 high detail
 high detailed
+high dynamic range
 high quality
 high quality photo
 high resolution
 holographic
+horror film
 hyper realism
 hyper-realistic
+hypnotic
 ilford hp5
 ilya kuvshinov
 imax
@@ -161,20 +188,24 @@ instax
 intricate
 intricate patterns
 iridescent
+irridescent
 iso 200
 isometric
+kinetic
 kodak ektar
 kodak gold 200
 kodak portra
 lighthearted
 logo
 lomo
+long exposure
 long lens
 lovecraftian
 lovely
 low contrast
 low poly
 lowbrow
+luminescence
 macabre
 macro
 macro photography
@@ -218,12 +249,17 @@ mystical
 national geographic photo
 neon
 nightmare
+nightscape
 octane render
 official art
 oil on canvas
+ominous
 ominous vibe
+ornate
+orthogonal
 outlined art
 outrun
+painterly
 panorama
 parallax
 pencil sketch
@@ -255,28 +291,37 @@ ps1 graphics
 psychedelic
 quantum wavetracing
 ray tracing
+realism
+redshift
 reimagined by industrial light and magic
 renaissance painting
 rendered in cinema4d
 rendered in maya
 rendered in unreal engine
+repeating pattern
 retrowave
 rich color palette
+rim light
 rococo
 rough
 rtx
 rtx on
+sanctuary
 sci-fi
 seapunk
 sense of awe
 sensual
 shallow depth of field
 sharp focus
+shiny
+shiny eyes
 shot on 70mm
 sketchfab
 skeuomorphic
+smokey background
 smooth
 soft light
+soft mist
 soviet propaganda
 speedpainting
 stained glass
@@ -299,10 +344,12 @@ synthwave
 tarot card
 tattoo
 terragen
+tesseract
 thx sound
 tilt shift
 tintype photograph
 trance compilation cd
+trypophobia
 ue5
 uhd image
 ukiyo-e
@@ -326,6 +373,7 @@ wavy
 whimsical
 white background
 wiccan
+wide lens
 wimmelbilder
 windows vista
 windows xp

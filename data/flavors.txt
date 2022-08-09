@@ -18,6 +18,7 @@
 8k resolution
 academic art
 acrylic art
+aesthetic
 aftereffects
 airbrush art
 ambient occlusion
@@ -38,6 +39,7 @@ atmospheric
 award winning
 award-winning
 backlight
+beautiful
 behance hd
 biomorphic
 black and white
@@ -45,14 +47,15 @@ black background
 blueprint
 bob ross
 bokeh
-bokeh
 booru
 bryce 3d
 chalk art
+character
 charcoal drawing
 chiaroscuro
 childs drawing
 cinematic
+cityscape
 clean
 cluttered
 colorized
@@ -61,6 +64,7 @@ concept art
 concert poster
 constructivism
 contest winner
+cosmic horror
 creative commons attribution
 creepypasta
 criterion collection
@@ -81,6 +85,7 @@ deviantart hd
 digital illustration
 digital painting
 digitally enhanced
+diorama
 dramatic lighting
 dslr
 dslr camera
@@ -94,18 +99,16 @@ extremely gendered
 fantasy
 fauvism
 feminine
-feminine
 film grain
 filmic
-filmic
 fine art
+flat colors
 flat shading
 flemish baroque
 flickering light
 flickr
 furaffinity
 genderless
-geometric
 geometric
 global illumination
 glowing neon
@@ -117,6 +120,7 @@ hd
 hd mod
 hdr
 henry moore
+high contrast
 high definition
 high detail
 high detailed
@@ -130,16 +134,17 @@ ilya kuvshinov
 imax
 impressionism
 infrared
-infrared
 ink drawing
 instax
 intricate
 iridescent
 iso 200
+isometric
 kodak ektar
 kodak gold 200
 kodak portra
 lomo
+low contrast
 low poly
 lowbrow
 macro
@@ -165,13 +170,12 @@ made of wrought iron
 marble sculpture
 marvel comics
 masculine
-masculine
 matte background
 matte drawing
 matte painting
-matte painting
 matte photo
 maximalist
+messy
 minimalist
 mist
 mixed media
@@ -221,6 +225,7 @@ rococo
 rough
 rtx
 rtx on
+sci-fi
 seapunk
 sharp focus
 shot on 70mm
@@ -235,6 +240,7 @@ stipple
 stock photo
 stockphoto
 storybook illustration
+streetscape
 studio lighting
 studio photography
 sunrays shine upon it
@@ -252,7 +258,6 @@ ultra detailed
 ultra hd
 ultra realistic
 ultrafine detail
-unreal engine
 unreal engine
 vaporwave
 velvia

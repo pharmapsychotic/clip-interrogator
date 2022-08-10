@@ -1243,6 +1243,7 @@ Elaine Hamilton
 Elaine de Kooning
 Elbridge Ayer Burbank
 Eleanor Best
+Eleanor Fortescue-Brickdale
 Eleanor Hughes
 Eleanor Layfield Davis
 Eleanor Vere Boyle
@@ -4591,6 +4592,7 @@ Terry Oakes
 Terry Redlin
 Tetsugoro Yorozu
 Tex Avery
+The Family Circus
 The Mazeking
 Theo Constanté
 Theo van Doesburg
@@ -5193,21 +5195,13 @@ Zsuzsa Máthé
 Zvest Apollonio
 Zygmunt Vogel
 Zygmunt Waliszewski
-amily Circus The
 artist
-arusCarl Gustav Canaletto
-awaseHasui Kawacy
-hirico, Giorgio De
 mckadesinsanity
-olandoCyril RHADS
-omineAdrian theCHAMBA
-ones, Edward Burne
-organ, Evelyn De
-rickdale, Eleanor Fortescue
 senior artist
 senior character artist
 senior environment artist
 the Brothers Hildebrandt
+theCHAMBA
 wlop
 Ángel Botello
 Ásgrímur Jónsson

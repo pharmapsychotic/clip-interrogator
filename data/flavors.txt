@@ -25,7 +25,10 @@ aesthetic
 aftereffects
 airbrush art
 ambient occlusion
+ambrotype
 american propaganda
+anaglyph effect
+anaglyph filter
 anamorphic lens flare
 androgynous
 angelic photograph
@@ -57,11 +60,13 @@ bob ross
 bokeh
 booru
 bryce 3d
+calotype
 chalk art
 character
 charcoal drawing
 chiaroscuro
 childs drawing
+chillwave
 chromatic
 cinematic
 cinematic lighting
@@ -87,6 +92,7 @@ creepypasta
 criterion collection
 cryengine
 cubism
+cyanotype
 d&d
 da vinci
 dark
@@ -128,12 +134,15 @@ feminine
 film grain
 filmic
 fine art
+fisheye lens
 flat colors
 flat shading
 flemish baroque
 flickering light
 flickr
+fractalism
 freakshow
+fresco
 full body
 full of details
 furaffinity
@@ -207,7 +216,7 @@ low poly
 lowbrow
 luminescence
 macabre
-macro
+macro lens
 macro photography
 made of all of the above
 made of beads and yarn
@@ -244,6 +253,7 @@ mist
 mixed media
 movie poster
 movie still
+multiple exposure
 muted
 mystical
 national geographic photo
@@ -306,6 +316,8 @@ rococo
 rough
 rtx
 rtx on
+sabattier effect
+sabattier filter
 sanctuary
 sci-fi
 seapunk
@@ -343,11 +355,13 @@ symmetrical
 synthwave
 tarot card
 tattoo
+telephoto lens
 terragen
 tesseract
 thx sound
 tilt shift
 tintype photograph
+toonami
 trance compilation cd
 trypophobia
 ue5

@@ -1489,7 +1489,6 @@ Frances C. Fairman
 Frances Currey
 Frances Hodgkins
 Frances Jetter
-Frances Macdonald
 Frances MacDonald
 Francesco Albani
 Francesco Bartolozzi
@@ -2978,7 +2977,6 @@ Keith Henderson
 Keith Mallett
 Keith Parkinson
 Kelly Freas
-Kelly Mckernan
 Kelly McKernan
 Kelly Sueda
 Ken Danby
@@ -3548,7 +3546,6 @@ Michael Andrews
 Michael Cheval
 Michael Dahl
 Michael Deforge
-Michael DeForge
 Michael Flohr
 Michael Ford
 Michael Garmash
@@ -4682,7 +4679,6 @@ Thomas Campbell
 Thomas Cantrell Dugdale
 Thomas Carr
 Thomas Cole
-THOMAS COLE
 Thomas Cornell
 Thomas Corsan Morton
 Thomas Couture
@@ -4886,7 +4882,6 @@ Vincent Evans
 Vincent Lefevre
 Vincent Pepi
 Vincent Proce
-Vincent van Gogh
 Vincent Van Gogh
 Vincenzo Cabianca
 Vincenzo Irolli
@@ -5100,7 +5095,6 @@ Władysław Ślewiński
 Wladyslaw Strzeminski
 Wlastimil Hofman
 Wlodzimierz Tetmajer
-wlop
 WLOP
 Wojciech Gerson
 Wojciech Korneli Stattler

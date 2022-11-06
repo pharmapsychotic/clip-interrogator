@@ -46,7 +46,7 @@ def _load_list(data_path, filename) -> List[str]:
     return items
 
 
-class CLIPInterrogator():
+class Interrogator():
     def __init__(self, config: Config):
         self.config = config
         self.device = config.device

@@ -7,7 +7,7 @@ import torch
 
 from PIL import Image
 
-from clip_interrogator import CLIPInterrogator, Config
+from clip_interrogator import Interrogator, Config
 
 
 def main():
@@ -39,9 +39,8 @@ def main():
     # generate a nice prompt
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     config = Config(device=device, clip_model_name=args.clip)
-    interrogator = CLIPInterrogator(config)
-    prompt = interrogator.interrogate(image)
-    print(prompt)
+    ci = Interrogator(config)
+    print(ci.interrogate(image))
 
 if __name__ == "__main__":
     main()

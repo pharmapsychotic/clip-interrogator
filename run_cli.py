@@ -1,19 +1,16 @@
 #!/usr/bin/env python3
-
 import argparse
 import clip
 import requests
 import torch
-
 from PIL import Image
-
 from clip_interrogator import Interrogator, Config
-
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-i', '--image', help='image file or url')
     parser.add_argument('-c', '--clip', default='ViT-L/14', help='name of CLIP model to use')
+    parser.add_argument('-i', '--image', help='image file or url')
+    parser.add_argument('-m', '--mode', default='best', help='best, classic, or fast')
 
     args = parser.parse_args()
     if not args.image:
@@ -40,7 +37,13 @@ def main():
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     config = Config(device=device, clip_model_name=args.clip)
     ci = Interrogator(config)
-    print(ci.interrogate(image))
+    if args.mode == 'best':
+        prompt = ci.interrogate(image)
+    elif args.mode == 'classic':
+        prompt = ci.interrogate_classic(image)
+    else:
+        prompt = ci.interrogate_fast(image)
+    print(prompt)
 
 if __name__ == "__main__":
     main()

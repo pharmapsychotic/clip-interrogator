@@ -1,0 +1,5 @@
+include clip_interrogator/data/artists.txt
+include clip_interrogator/data/flavors.txt
+include clip_interrogator/data/mediums.txt
+include clip_interrogator/data/movements.txt
+include requirements.txt

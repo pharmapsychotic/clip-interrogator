@@ -38,7 +38,7 @@ def main():
 
     # generate a nice prompt
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    config = Config(device=device, clip_model_name=args.clip, data_path='data')
+    config = Config(device=device, clip_model_name=args.clip)
     interrogator = CLIPInterrogator(config)
     prompt = interrogator.interrogate(image)
     print(prompt)

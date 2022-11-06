@@ -35,7 +35,7 @@ class Config:
     # interrogator settings
     cache_path: str = 'cache'
     chunk_size: int = 2048
-    data_path: str = 'data'
+    data_path: str = os.path.join(os.path.dirname(__file__), 'data')
     device: str = 'cuda' if torch.cuda.is_available() else 'cpu'
     flavor_intermediate_count: int = 2048    
 

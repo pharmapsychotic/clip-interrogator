@@ -3,5 +3,3 @@ torchvision
 Pillow
 requests
 tqdm
--e git+https://github.com/openai/CLIP.git@main#egg=clip
--e git+https://github.com/pharmapsychotic/BLIP.git@lib#egg=blip

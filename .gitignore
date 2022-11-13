@@ -1,4 +1,5 @@
 *.pyc
+.cog/
 .vscode/
 cache/
 clip-interrogator/

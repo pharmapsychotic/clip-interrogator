@@ -1,6 +1,7 @@
 *.pyc
 .cog/
 .vscode/
+bench/
 cache/
 clip-interrogator/
 clip_interrogator.egg-info/

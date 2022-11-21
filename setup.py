@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="clip-interrogator",
-    version="0.1.4",
+    version="0.2.0",
     license='MIT',
     author='pharmapsychotic',
     author_email='me@pharmapsychotic.com',

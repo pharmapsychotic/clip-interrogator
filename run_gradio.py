@@ -1,7 +1,12 @@
 #!/usr/bin/env python3
-import clip
+import argparse
 import gradio as gr
+import open_clip
 from clip_interrogator import Interrogator, Config
+
+parser = argparse.ArgumentParser()
+parser.add_argument('-s', '--share', action='store_true', help='Create a public link')
+args = parser.parse_args()
 
 ci = Interrogator(Config())
 
@@ -19,11 +24,13 @@ def inference(image, mode, clip_model_name, blip_max_length, blip_num_beams):
         return ci.interrogate_classic(image)
     else:
         return ci.interrogate_fast(image)
-    
+
+models = ['/'.join(x) for x in open_clip.list_pretrained()]
+
 inputs = [
     gr.inputs.Image(type='pil'),
     gr.Radio(['best', 'classic', 'fast'], label='Mode', value='best'),
-    gr.Dropdown(clip.available_models(), value='ViT-L/14', label='CLIP Model'),
+    gr.Dropdown(models, value='ViT-H-14/laion2b_s32b_b79k', label='CLIP Model'),
     gr.Number(value=32, label='Caption Max Length'),
     gr.Number(value=64, label='Caption Num Beams'),
 ]
@@ -38,4 +45,5 @@ io = gr.Interface(
     title="🕵️‍♂️ CLIP Interrogator 🕵️‍♂️",
     allow_flagging=False,
 )
-io.launch()
+io.launch(share=args.share)
+

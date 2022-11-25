@@ -187,15 +187,13 @@ class Interrogator():
 
         extended_flavors = set(flaves)
         for _ in tqdm(range(max_flavors), desc="Flavor chain", disable=self.config.quiet):
-            try:
-                best = self.rank_top(image_features, [f"{best_prompt}, {f}" for f in extended_flavors])
-                flave = best[len(best_prompt)+2:]
-                if not check(flave):
-                    break
-                extended_flavors.remove(flave)
-            except:
-                # exceeded max prompt length
+            best = self.rank_top(image_features, [f"{best_prompt}, {f}" for f in extended_flavors])
+            flave = best[len(best_prompt)+2:]
+            if not check(flave):
                 break
+            if _prompt_at_max_len(best_prompt, self.tokenize):
+                break
+            extended_flavors.remove(flave)
 
         return best_prompt
 
@@ -306,11 +304,15 @@ def _merge_tables(tables: List[LabelTable], config: Config) -> LabelTable:
         m.embeds.extend(table.embeds)
     return m
 
+def _prompt_at_max_len(text: str, tokenize) -> bool:
+    tokens = tokenize([text])
+    return tokens[0][-1] != 0
+
 def _truncate_to_fit(text: str, tokenize) -> str:
-    while True:
-        try:
-            _ = tokenize([text])
-            return text
-        except:
-            text = ",".join(text.split(",")[:-1])
-        
+    parts = text.split(', ')
+    new_text = parts[0]
+    for part in parts[1:]:
+        if _prompt_at_max_len(new_text + part, tokenize):
+            break
+        new_text += ', ' + part
+    return new_text

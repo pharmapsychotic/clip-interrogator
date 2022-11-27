@@ -12,9 +12,9 @@ build:
     - "ftfy==6.1.1"
     - "torch==1.11.0 --extra-index-url=https://download.pytorch.org/whl/cu113"
     - "torchvision==0.12.0 --extra-index-url=https://download.pytorch.org/whl/cu113"
+    - "open_clip_torch==2.7.0"    
   run:
   - pip install -e git+https://github.com/pharmapsychotic/BLIP.git@lib#egg=blip
-  - pip install -e git+https://github.com/openai/CLIP.git@main#egg=clip
   - mkdir -p /root/.cache/clip && wget --output-document "/root/.cache/clip/ViT-L-14.pt" "https://openaipublic.azureedge.net/clip/models/b8cca3fd41ae0c99ba7e8951adf17d267cdb84cd88be6f7c2e0eca1737a03836/ViT-L-14.pt"
 
 predict: "predict.py:Predictor"

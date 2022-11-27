@@ -9,7 +9,7 @@ from clip_interrogator import Interrogator, Config
 
 class Predictor(BasePredictor):
     def setup(self):
-        config = Config(device="cuda:0", clip_model_name='ViT-L/14')
+        config = Config(device="cuda:0", clip_model_name='ViT-L-14/openai')
         self.ci = Interrogator(config)
 
     def predict(self, image: Path = Input(description="Input image")) -> str:

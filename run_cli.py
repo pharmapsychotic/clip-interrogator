@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import argparse
-import clip
 import csv
+import open_clip
 import os
 import requests
 import torch
@@ -19,7 +19,7 @@ def inference(ci, image, mode):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-c', '--clip', default='ViT-L/14', help='name of CLIP model to use')
+    parser.add_argument('-c', '--clip', default='ViT-L-14/openai', help='name of CLIP model to use')
     parser.add_argument('-f', '--folder', help='path to folder of images')
     parser.add_argument('-i', '--image', help='image file or url')
     parser.add_argument('-m', '--mode', default='best', help='best, classic, or fast')
@@ -34,9 +34,10 @@ def main():
         exit(1)
 
     # validate clip model name
-    if args.clip not in clip.available_models():
+    models = ['/'.join(x) for x in open_clip.list_pretrained()]
+    if args.clip not in models:
         print(f"Could not find CLIP model {args.clip}!")
-        print(f"    available models: {clip.available_models()}")
+        print(f"    available models: {models}")
         exit(1)
 
     # generate a nice prompt

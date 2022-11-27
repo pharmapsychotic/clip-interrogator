@@ -8,12 +8,12 @@ parser = argparse.ArgumentParser()
 parser.add_argument('-s', '--share', action='store_true', help='Create a public link')
 args = parser.parse_args()
 
-ci = Interrogator(Config())
+ci = Interrogator(Config(cache_path="cache", clip_model_path="cache"))
 
 def inference(image, mode, clip_model_name, blip_max_length, blip_num_beams):
-    global ci
     if clip_model_name != ci.config.clip_model_name:
-        ci = Interrogator(Config(clip_model_name=clip_model_name))
+        ci.config.clip_model_name = clip_model_name
+        ci.load_clip_model()
     ci.config.blip_max_length = int(blip_max_length)
     ci.config.blip_num_beams = int(blip_num_beams)
 
@@ -30,7 +30,7 @@ models = ['/'.join(x) for x in open_clip.list_pretrained()]
 inputs = [
     gr.inputs.Image(type='pil'),
     gr.Radio(['best', 'classic', 'fast'], label='Mode', value='best'),
-    gr.Dropdown(models, value='ViT-H-14/laion2b_s32b_b79k', label='CLIP Model'),
+    gr.Dropdown(models, value='ViT-L-14/openai', label='CLIP Model'),
     gr.Number(value=32, label='Caption Max Length'),
     gr.Number(value=64, label='Caption Num Beams'),
 ]

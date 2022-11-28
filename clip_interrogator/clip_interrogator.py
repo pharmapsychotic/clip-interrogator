@@ -251,10 +251,13 @@ class LabelTable():
             cache_filepath = os.path.join(config.cache_path, f"{sanitized_name}_{desc}.pkl")
             if desc is not None and os.path.exists(cache_filepath):
                 with open(cache_filepath, 'rb') as f:
-                    data = pickle.load(f)
-                    if data.get('hash') == hash:
-                        self.labels = data['labels']
-                        self.embeds = data['embeds']
+                    try:
+                        data = pickle.load(f)
+                        if data.get('hash') == hash:
+                            self.labels = data['labels']
+                            self.embeds = data['embeds']
+                    except Exception as e:
+                        print(f"Error loading cached table {desc}: {e}")
 
         if len(self.labels) != len(self.embeds):
             self.embeds = []

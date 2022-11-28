@@ -27,12 +27,12 @@ class Config:
     # blip settings
     blip_image_eval_size: int = 384
     blip_max_length: int = 32
-    blip_model_url: str = 'https://storage.googleapis.com/sfr-vision-language-research/BLIP/models/model_large_caption.pth'
+    blip_model_url: str = 'https://storage.googleapis.com/sfr-vision-language-research/BLIP/models/model_base_14M.pth'
     blip_num_beams: int = 8
     blip_offload: bool = False
 
     # clip settings
-    clip_model_name: str = 'CLIP-ViT-g-14-laion2B-s12B-b42K'
+    clip_model_name: str = 'ViT-B-32/laion2b_s34b_b79K'
     clip_model_path: str = None
 
     # interrogator settings
@@ -58,7 +58,7 @@ class Interrogator():
             blip_model = blip_decoder(
                 pretrained=config.blip_model_url, 
                 image_size=config.blip_image_eval_size, 
-                vit='large', 
+                vit='base', 
                 med_config=med_config
             )
             blip_model.eval()

@@ -10,6 +10,12 @@ Run Version 2 on Colab, HuggingFace, and Replicate!
 
 <br>
 
+For **Stable Diffusion 2.0** prompting use the `ViT-H` version:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pharmapsychotic/clip-interrogator/blob/open-clip/clip_interrogator.ipynb) [![Generic badge](https://img.shields.io/badge/🤗-Open%20in%20Spaces-blue.svg)](https://huggingface.co/spaces/fffiloni/CLIP-Interrogator-2)
+
+<br>
+
 Version 1 still available in Colab for comparing different CLIP models 
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pharmapsychotic/clip-interrogator/blob/v1/clip_interrogator.ipynb) 
@@ -30,7 +36,6 @@ source ci_env/bin/activate
 
 Install with PIP
 ```
-pip install -e git+https://github.com/openai/CLIP.git@main#egg=clip
 pip install -e git+https://github.com/pharmapsychotic/BLIP.git@lib#egg=blip
 pip install clip-interrogator
 ```
@@ -40,6 +45,10 @@ You can then use it in your script
 from PIL import Image
 from clip_interrogator import Interrogator, Config
 image = Image.open(image_path).convert('RGB')
-ci = Interrogator(Config(clip_model_name="ViT-L/14"))
+ci = Interrogator(Config(clip_model_name="ViT-L-14/openai"))
 print(ci.interrogate(image))
 ```
+
+CLIP Interrogator uses OpenCLIP which supports many different pretrained CLIP models. For the best prompts for 
+Stable Diffusion 1.X use `ViT-L-14/openai` for clip_model_name. For Stable Diffusion 2.0 use `ViT-H-14/laion2b_s32b_b79k`
+

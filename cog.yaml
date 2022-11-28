@@ -1,6 +1,6 @@
 build:
   gpu: true
-  cuda: "11.3"
+  cuda: "11.6"
   python_version: "3.8"
   system_packages:
     - "libgl1-mesa-glx"
@@ -10,11 +10,12 @@ build:
     - "fairscale==0.4.12"
     - "transformers==4.21.2"
     - "ftfy==6.1.1"
-    - "torch==1.11.0 --extra-index-url=https://download.pytorch.org/whl/cu113"
-    - "torchvision==0.12.0 --extra-index-url=https://download.pytorch.org/whl/cu113"
+    - "torch==1.13.0 --extra-index-url=https://download.pytorch.org/whl/cu116"
+    - "torchvision==0.14.0 --extra-index-url=https://download.pytorch.org/whl/cu116"
+    - "open_clip_torch==2.7.0"    
+    - "timm==0.4.12"
+    - "pycocoevalcap==1.2"
   run:
-  - pip install -e git+https://github.com/pharmapsychotic/BLIP.git@lib#egg=blip
-  - pip install -e git+https://github.com/openai/CLIP.git@main#egg=clip
-  - mkdir -p /root/.cache/clip && wget --output-document "/root/.cache/clip/ViT-L-14.pt" "https://openaipublic.azureedge.net/clip/models/b8cca3fd41ae0c99ba7e8951adf17d267cdb84cd88be6f7c2e0eca1737a03836/ViT-L-14.pt"
+  - git clone https://github.com/salesforce/BLIP /root/blip
 
 predict: "predict.py:Predictor"

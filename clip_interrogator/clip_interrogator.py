@@ -32,7 +32,7 @@ class Config:
     blip_offload: bool = False
 
     # clip settings
-    clip_model_name: str = 'ViT-H-14/laion2b_s32b_b79k'
+    clip_model_name: str = 'ViT-L-14/openai'
     clip_model_path: str = None
 
     # interrogator settings

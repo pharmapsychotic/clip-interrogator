@@ -26,11 +26,16 @@ The **CLIP Interrogator** is a prompt engineering tool that combines OpenAI's [C
 Create and activate a Python virtual environment
 ```bash
 python3 -m venv ci_env
-source ci_env/bin/activate
+(for linux  ) source ci_env/bin/activate
+(for windows) .\ci_env\Scripts\activate
 ```
 
 Install with PIP
 ```
+# install torch with GPU support for example:
+pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu117
+
+# install blip and clip-interrogator
 pip install -e git+https://github.com/pharmapsychotic/BLIP.git@lib#egg=blip
 pip install clip-interrogator
 ```

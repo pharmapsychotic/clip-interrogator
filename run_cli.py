@@ -40,8 +40,12 @@ def main():
         print(f"    available models: {models}")
         exit(1)
 
-    # generate a nice prompt
+    # select device
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    if not torch.cuda.is_available():
+        print("CUDA is not available, using CPU. Warning: this will be very slow!")
+
+    # generate a nice prompt
     config = Config(device=device, clip_model_name=args.clip)
     ci = Interrogator(config)
 

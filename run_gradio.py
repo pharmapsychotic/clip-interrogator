@@ -2,11 +2,15 @@
 import argparse
 import gradio as gr
 import open_clip
+import torch
 from clip_interrogator import Interrogator, Config
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-s', '--share', action='store_true', help='Create a public link')
 args = parser.parse_args()
+
+if not torch.cuda.is_available():
+    print("CUDA is not available, using CPU. Warning: this will be very slow!")
 
 ci = Interrogator(Config(cache_path="cache", clip_model_path="cache"))
 

@@ -37,7 +37,7 @@ pip3 install torch torchvision torchaudio --extra-index-url https://download.pyt
 
 # install blip and clip-interrogator
 pip install -e git+https://github.com/pharmapsychotic/BLIP.git@lib#egg=blip
-pip install clip-interrogator
+pip install clip-interrogator==0.3.2
 ```
 
 You can then use it in your script

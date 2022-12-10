@@ -20,6 +20,7 @@ def inference(ci, image, mode):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('-c', '--clip', default='ViT-L-14/openai', help='name of CLIP model to use')
+    parser.add_argument('-d', '--device', default='auto', help='device to use (auto, cuda or cpu)')
     parser.add_argument('-f', '--folder', help='path to folder of images')
     parser.add_argument('-i', '--image', help='image file or url')
     parser.add_argument('-m', '--mode', default='best', help='best, classic, or fast')
@@ -41,9 +42,12 @@ def main():
         exit(1)
 
     # select device
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    if not torch.cuda.is_available():
-        print("CUDA is not available, using CPU. Warning: this will be very slow!")
+    if args.device == 'auto':
+        device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+        if not torch.cuda.is_available():
+            print("CUDA is not available, using CPU. Warning: this will be very slow!")
+    else:
+        device = torch.device(args.device)
 
     # generate a nice prompt
     config = Config(device=device, clip_model_name=args.clip)

@@ -15,7 +15,6 @@ build:
     - "open_clip_torch==2.7.0"    
     - "timm==0.4.12"
     - "pycocoevalcap==1.2"
-  run:
-  - git clone https://github.com/salesforce/BLIP /root/blip
+    - "git+https://github.com/pharmapsychotic/BLIP.git"
 
 predict: "predict.py:Predictor"

@@ -9,7 +9,7 @@ import time
 import torch
 
 from dataclasses import dataclass
-from models.blip import blip_decoder, BLIP_Decoder
+from blip.models.blip import blip_decoder, BLIP_Decoder
 from PIL import Image
 from torchvision import transforms
 from torchvision.transforms.functional import InterpolationMode

@@ -33,11 +33,11 @@ python3 -m venv ci_env
 Install with PIP
 ```
 # install torch with GPU support for example:
-pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu117
+pip3 install torch torchvision --extra-index-url https://download.pytorch.org/whl/cu117
 
-# install blip and clip-interrogator
-pip install -e git+https://github.com/pharmapsychotic/BLIP.git@lib#egg=blip
-pip install clip-interrogator==0.3.2
+# install clip-interrogator and blip
+pip install clip-interrogator==0.3.3
+pip install git+https://github.com/pharmapsychotic/BLIP.git
 ```
 
 You can then use it in your script

@@ -2,8 +2,6 @@ import sys
 from PIL import Image
 from cog import BasePredictor, Input, Path
 
-sys.path.append('/root/blip')
-
 from clip_interrogator import Interrogator, Config
 
 

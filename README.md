@@ -36,7 +36,7 @@ Install with PIP
 pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu117
 
 # install clip-interrogator
-pip install clip-interrogator==0.3.2
+pip install clip-interrogator==0.3.3
 ```
 
 You can then use it in your script

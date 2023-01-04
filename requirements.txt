@@ -4,4 +4,3 @@ Pillow
 requests
 tqdm
 open_clip_torch
-git+https://github.com/pharmapsychotic/BLIP.git

@@ -40,6 +40,8 @@ pip install clip-interrogator==0.3.3
 pip install git+https://github.com/pharmapsychotic/BLIP.git
 ```
 
+> If BLIP install fails on `pycocotools`, use `pip install cython` and try again.
+
 You can then use it in your script
 ```python
 from PIL import Image

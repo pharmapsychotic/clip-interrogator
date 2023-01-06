@@ -39,6 +39,8 @@ pip3 install torch torchvision --extra-index-url https://download.pytorch.org/wh
 pip install clip-interrogator==0.3.5
 ```
 
+> If BLIP install fails on `pycocotools`, use `pip install cython` and try again.
+
 You can then use it in your script
 ```python
 from PIL import Image

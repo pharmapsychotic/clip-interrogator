@@ -4,3 +4,4 @@ Pillow
 requests
 tqdm
 open_clip_torch
+blip-vit

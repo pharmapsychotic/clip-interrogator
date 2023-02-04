@@ -35,15 +35,14 @@ Install with PIP
 # install torch with GPU support for example:
 pip3 install torch torchvision --extra-index-url https://download.pytorch.org/whl/cu117
 
-# install clip-interrogator and blip
-pip install clip-interrogator==0.3.3
-pip install git+https://github.com/pharmapsychotic/BLIP.git
+# install clip-interrogator
+pip install clip-interrogator==0.3.5
 ```
 
 You can then use it in your script
 ```python
 from PIL import Image
-from clip_interrogator import Interrogator, Config
+from clip_interrogator import Config, Interrogator
 image = Image.open(image_path).convert('RGB')
 ci = Interrogator(Config(clip_model_name="ViT-L-14/openai"))
 print(ci.interrogate(image))

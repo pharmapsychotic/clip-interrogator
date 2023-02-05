@@ -271,7 +271,7 @@ class Interrogator():
         merged = _merge_tables([self.artists, self.flavors, self.mediums, self.movements, self.trendings], self.config)
         flaves = merged.rank(image_features, self.config.flavor_intermediate_count)
 
-        best_prompt, best_sim = caption, self.similarity(image_features, best_prompt)
+        best_prompt, best_sim = caption, self.similarity(image_features, caption)
         best_prompt = self.chain(image_features, flaves, best_prompt, best_sim, min_count=min_flavors, max_count=max_flavors, desc="Flavor chain")
 
         fast_prompt = self.interrogate_fast(image, max_flavors)

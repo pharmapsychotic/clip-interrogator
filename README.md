@@ -36,7 +36,7 @@ Install with PIP
 pip3 install torch torchvision --extra-index-url https://download.pytorch.org/whl/cu117
 
 # install clip-interrogator
-pip install clip-interrogator==0.4.1
+pip install clip-interrogator==0.4.2
 ```
 
 You can then use it in your script
@@ -51,3 +51,13 @@ print(ci.interrogate(image))
 CLIP Interrogator uses OpenCLIP which supports many different pretrained CLIP models. For the best prompts for 
 Stable Diffusion 1.X use `ViT-L-14/openai` for clip_model_name. For Stable Diffusion 2.0 use `ViT-H-14/laion2b_s32b_b79k`
 
+## Configuration
+
+The `Config` object lets you configure CLIP Interrogator's processing. 
+* `clip_model_name`: which of the OpenCLIP pretrained CLIP models to use
+* `cache_path`: path where to save precomputed text embeddings
+* `download_cache`: when True will download the precomputed embeddings from huggingface
+* `chunk_size`: batch size for CLIP, use smaller for lower VRAM
+* `quiet`: when True no progress bars or text output will be displayed
+
+See the [run_cli.py](https://github.com/pharmapsychotic/clip-interrogator/blob/main/run_cli.py) and [run_gradio.py](https://github.com/pharmapsychotic/clip-interrogator/blob/main/run_gradio.py) for more examples on using Config and Interrogator classes.

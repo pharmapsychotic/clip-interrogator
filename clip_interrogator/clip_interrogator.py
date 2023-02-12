@@ -440,6 +440,7 @@ class Interrogator:
         if self.blip_loaded:  # Move CLIP to intended device
             self.blip_model.to("cpu")
             self.cli_model.to(self.device)
+            self.blip_loaded = False
 
         image_features = self.image_to_features(image)
         flaves = self.flavors.rank(

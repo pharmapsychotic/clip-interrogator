@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
 import argparse
-import gradio as gr
 import open_clip
 import torch
 from clip_interrogator import Config, Interrogator
+
+try:
+    import gradio as gr
+except ImportError:
+    print("Gradio is not installed, please install it with 'pip install gradio'")
+    exit(1)
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-s', '--share', action='store_true', help='Create a public link')

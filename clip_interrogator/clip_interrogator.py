@@ -89,7 +89,8 @@ class Interrogator():
                 med_config=med_config
             )
             blip_model.eval()
-            blip_model = blip_model.to(config.device)
+            if not self.config.blip_offload:
+                blip_model = blip_model.to(config.device)
             self.blip_model = blip_model
         else:
             self.blip_model = config.blip_model

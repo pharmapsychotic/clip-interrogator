@@ -36,7 +36,7 @@ Install with PIP
 pip3 install torch torchvision --extra-index-url https://download.pytorch.org/whl/cu117
 
 # install clip-interrogator
-pip install clip-interrogator==0.5.1
+pip install clip-interrogator==0.5.2
 ```
 
 You can then use it in your script
@@ -59,5 +59,7 @@ The `Config` object lets you configure CLIP Interrogator's processing.
 * `download_cache`: when True will download the precomputed embeddings from huggingface
 * `chunk_size`: batch size for CLIP, use smaller for lower VRAM
 * `quiet`: when True no progress bars or text output will be displayed
+
+On systems with low VRAM you can call `config.apply_low_vram_defaults()` to reduce the amount of VRAM needed (at the cost of some speed and quality). The default settings use about 6.3GB of VRAM and the low VRAM settings use about 2.7GB.
 
 See the [run_cli.py](https://github.com/pharmapsychotic/clip-interrogator/blob/main/run_cli.py) and [run_gradio.py](https://github.com/pharmapsychotic/clip-interrogator/blob/main/run_gradio.py) for more examples on using Config and Interrogator classes.

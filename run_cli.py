@@ -24,6 +24,7 @@ def main():
     parser.add_argument('-f', '--folder', help='path to folder of images')
     parser.add_argument('-i', '--image', help='image file or url')
     parser.add_argument('-m', '--mode', default='best', help='best, classic, or fast')
+    parser.add_argument("--lowvram", action='store_true', help="Optimize settings for low VRAM")
 
     args = parser.parse_args()
     if not args.folder and not args.image:
@@ -51,6 +52,8 @@ def main():
 
     # generate a nice prompt
     config = Config(device=device, clip_model_name=args.clip)
+    if args.lowvram:
+        config.apply_low_vram_defaults()
     ci = Interrogator(config)
 
     # process single image

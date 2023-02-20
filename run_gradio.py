@@ -11,13 +11,17 @@ except ImportError:
     exit(1)
 
 parser = argparse.ArgumentParser()
+parser.add_argument("--lowvram", action='store_true', help="Optimize settings for low VRAM")
 parser.add_argument('-s', '--share', action='store_true', help='Create a public link')
 args = parser.parse_args()
 
 if not torch.cuda.is_available():
     print("CUDA is not available, using CPU. Warning: this will be very slow!")
 
-ci = Interrogator(Config(cache_path="cache", clip_model_path="cache"))
+config = Config(cache_path="cache")
+if args.lowvram:
+    config.apply_low_vram_defaults()
+ci = Interrogator(config)
 
 def image_analysis(image, clip_model_name):
     if clip_model_name != ci.config.clip_model_name:

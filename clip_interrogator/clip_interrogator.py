@@ -300,7 +300,7 @@ class Interrogator():
             self.blip_offloaded = False
 
     def _prepare_clip(self):
-        if self.config.blip_offload:
+        if self.config.blip_offload and not self.blip_offloaded:
             self.blip_model = self.blip_model.to('cpu')
             self.blip_offloaded = True
         if self.clip_offloaded:

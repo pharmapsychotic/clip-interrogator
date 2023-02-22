@@ -93,11 +93,12 @@ class Interrogator():
         start_time = time.time()
         config = self.config
 
+        clip_model_name, clip_model_pretrained_name = config.clip_model_name.split('/', 2)
+
         if config.clip_model is None:
             if not config.quiet:
                 print("Loading CLIP model...")
 
-            clip_model_name, clip_model_pretrained_name = config.clip_model_name.split('/', 2)
             self.clip_model, _, self.clip_preprocess = open_clip.create_model_and_transforms(
                 clip_model_name, 
                 pretrained=clip_model_pretrained_name, 

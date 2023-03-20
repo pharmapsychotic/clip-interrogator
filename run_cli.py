@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
 import argparse
 import csv
-import open_clip
 import os
 import requests
 import torch
 from PIL import Image
-from clip_interrogator import Interrogator, Config
+from clip_interrogator import Interrogator, Config, list_clip_models
 
 def inference(ci, image, mode):
     image = image.convert('RGB')
@@ -36,7 +35,7 @@ def main():
         exit(1)
 
     # validate clip model name
-    models = ['/'.join(x) for x in open_clip.list_pretrained()]
+    models = list_clip_models()
     if args.clip not in models:
         print(f"Could not find CLIP model {args.clip}!")
         print(f"    available models: {models}")

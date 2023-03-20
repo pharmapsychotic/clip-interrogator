@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 import argparse
-import open_clip
 import torch
-from clip_interrogator import Config, Interrogator
+from clip_interrogator import Config, Interrogator, list_caption_models, list_clip_models
 
 try:
     import gradio as gr
@@ -45,7 +44,11 @@ def image_analysis(image, clip_model_name):
     
     return medium_ranks, artist_ranks, movement_ranks, trending_ranks, flavor_ranks
 
-def image_to_prompt(image, mode, clip_model_name):
+def image_to_prompt(image, mode, clip_model_name, blip_model_name):
+    if blip_model_name != ci.config.caption_model_name:
+        ci.config.caption_model_name = blip_model_name
+        ci.load_caption_model()
+
     if clip_model_name != ci.config.clip_model_name:
         ci.config.clip_model_name = clip_model_name
         ci.load_clip_model()
@@ -60,25 +63,23 @@ def image_to_prompt(image, mode, clip_model_name):
     elif mode == 'negative':
         return ci.interrogate_negative(image)
 
-
-models = ['/'.join(x) for x in open_clip.list_pretrained()]
-
 def prompt_tab():
     with gr.Column():
         with gr.Row():
             image = gr.Image(type='pil', label="Image")
             with gr.Column():
                 mode = gr.Radio(['best', 'fast', 'classic', 'negative'], label='Mode', value='best')
-                model = gr.Dropdown(models, value='ViT-L-14/openai', label='CLIP Model')
+                clip_model = gr.Dropdown(list_clip_models(), value=ci.config.clip_model_name, label='CLIP Model')
+                blip_model = gr.Dropdown(list_caption_models(), value=ci.config.caption_model_name, label='Caption Model')
         prompt = gr.Textbox(label="Prompt")
     button = gr.Button("Generate prompt")
-    button.click(image_to_prompt, inputs=[image, mode, model], outputs=prompt)
+    button.click(image_to_prompt, inputs=[image, mode, clip_model, blip_model], outputs=prompt)
 
 def analyze_tab():
     with gr.Column():
         with gr.Row():
             image = gr.Image(type='pil', label="Image")
-            model = gr.Dropdown(models, value='ViT-L-14/openai', label='CLIP Model')
+            model = gr.Dropdown(list_clip_models(), value='ViT-L-14/openai', label='CLIP Model')
         with gr.Row():
             medium = gr.Label(label="Medium", num_top_classes=5)
             artist = gr.Label(label="Artist", num_top_classes=5)        

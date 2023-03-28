@@ -40,7 +40,10 @@ Install with PIP
 pip3 install torch torchvision --extra-index-url https://download.pytorch.org/whl/cu117
 
 # install clip-interrogator
-pip install clip-interrogator==0.6.0
+pip install clip-interrogator==0.5.4
+
+# or for very latest WIP with BLIP2 support
+#pip install clip-interrogator==0.6.0
 ```
 
 You can then use it in your script
@@ -69,7 +72,7 @@ On systems with low VRAM you can call `config.apply_low_vram_defaults()` to redu
 See the [run_cli.py](https://github.com/pharmapsychotic/clip-interrogator/blob/main/run_cli.py) and [run_gradio.py](https://github.com/pharmapsychotic/clip-interrogator/blob/main/run_gradio.py) for more examples on using Config and Interrogator classes.
 
 
-## Ranking against your own list of terms
+## Ranking against your own list of terms (requires version 0.6.0)
 
 ```python
 from clip_interrogator import Config, Interrogator, LabelTable, load_list

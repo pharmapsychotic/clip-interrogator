@@ -84,3 +84,37 @@ table = LabelTable(load_list('terms.txt'), 'terms', ci)
 best_match = table.rank(ci.image_to_features(image), top_count=1)[0]
 print(best_match)
 ```
+
+## Deploying as Cloud Service (using Baseten)
+This repo contains a [`truss`]("./truss"), which packages the model for cloud deployment using the [truss open-source library](https://github.com/basetenlabs/truss) by Baseten. Using this truss, you can easily deploy your own scalable cloud service of this model by following these steps.
+
+1. Clone the repo: `git clone https://github.com/pharmapsychotic/clip-interrogator.git`
+2. `cd clip-interrogator`
+3. Setup virtualenv with baseten and truss deps (make sure to upgrade)
+```
+python3 -m venv .env
+source .env/bin/activate
+pip install --upgrade pip
+pip install --upgrade baseten truss
+```
+4. [Grab API key from your Baseten account](https://docs.baseten.co/settings/api-keys)
+5. Deploy using this command
+```
+BASETEN_API_KEY=API_KEY_COPIED_FROM_BASETEN python deploy_baseten.py
+```
+6. You'll get an email once your model is ready and you can call it using the instructions from the UI.
+Below is a sample invocation.
+```
+import baseten, os
+baseten.login(os.environ["BASETEN_API_KEY"])
+
+img_str = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAApgAAAKYB3X3/OAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAANCSURBVEiJtZZPbBtFFMZ/M7ubXdtdb1xSFyeilBapySVU8h8OoFaooFSqiihIVIpQBKci6KEg9Q6H9kovIHoCIVQJJCKE1ENFjnAgcaSGC6rEnxBwA04Tx43t2FnvDAfjkNibxgHxnWb2e/u992bee7tCa00YFsffekFY+nUzFtjW0LrvjRXrCDIAaPLlW0nHL0SsZtVoaF98mLrx3pdhOqLtYPHChahZcYYO7KvPFxvRl5XPp1sN3adWiD1ZAqD6XYK1b/dvE5IWryTt2udLFedwc1+9kLp+vbbpoDh+6TklxBeAi9TL0taeWpdmZzQDry0AcO+jQ12RyohqqoYoo8RDwJrU+qXkjWtfi8Xxt58BdQuwQs9qC/afLwCw8tnQbqYAPsgxE1S6F3EAIXux2oQFKm0ihMsOF71dHYx+f3NND68ghCu1YIoePPQN1pGRABkJ6Bus96CutRZMydTl+TvuiRW1m3n0eDl0vRPcEysqdXn+jsQPsrHMquGeXEaY4Yk4wxWcY5V/9scqOMOVUFthatyTy8QyqwZ+kDURKoMWxNKr2EeqVKcTNOajqKoBgOE28U4tdQl5p5bwCw7BWquaZSzAPlwjlithJtp3pTImSqQRrb2Z8PHGigD4RZuNX6JYj6wj7O4TFLbCO/Mn/m8R+h6rYSUb3ekokRY6f/YukArN979jcW+V/S8g0eT/N3VN3kTqWbQ428m9/8k0P/1aIhF36PccEl6EhOcAUCrXKZXXWS3XKd2vc/TRBG9O5ELC17MmWubD2nKhUKZa26Ba2+D3P+4/MNCFwg59oWVeYhkzgN/JDR8deKBoD7Y+ljEjGZ0sosXVTvbc6RHirr2reNy1OXd6pJsQ+gqjk8VWFYmHrwBzW/n+uMPFiRwHB2I7ih8ciHFxIkd/3Omk5tCDV1t+2nNu5sxxpDFNx+huNhVT3/zMDz8usXC3ddaHBj1GHj/As08fwTS7Kt1HBTmyN29vdwAw+/wbwLVOJ3uAD1wi/dUH7Qei66PfyuRj4Ik9is+hglfbkbfR3cnZm7chlUWLdwmprtCohX4HUtlOcQjLYCu+fzGJH2QRKvP3UNz8bWk1qMxjGTOMThZ3kvgLI5AzFfo379UAAAAASUVORK5CYII='
+
+model = baseten.deployed_model_id("MODEL_ID_FROM_ACCOUNT")
+model.predict({
+    "image": img_str,
+    "format": "PNG",
+    "mode": "fast",
+    "clip_model_name": "ViT-L-14/openai"
+})
+```

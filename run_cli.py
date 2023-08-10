@@ -1,4 +1,4 @@
-# python run_cli.py -f /data/hdd1/shiym/competition/GitHubClone/diffusers/examples/custom_diffusion/real_reg/samples_girl/images -c ViT-L-14/openai -d cuda -m fast
+# python run_cli.py -f /data/hdd1/shiym/competition/GitHubClone/diffusers/examples/custom_diffusion/real_reg/samples_girl/images -c ViT-L-14/openai -d cuda -m best
 
 #!/usr/bin/env python3
 import argparse
@@ -75,7 +75,8 @@ def main():
             print(f'The folder {args.folder} does not exist!')
             exit(1)
 
-        files = [f for f in os.listdir(args.folder) if f.endswith('.jpg') or  f.endswith('.png')]
+
+        files = sorted([f for f in os.listdir(args.folder) if f.endswith('.jpg') or  f.endswith('.png')])
         prompts = []
         for file in files:
             image = Image.open(os.path.join(args.folder, file)).convert('RGB')

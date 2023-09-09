@@ -23,7 +23,7 @@ CAPTION_MODELS = {
     'git-large-coco': 'microsoft/git-large-coco',           # 1.58GB
 }
 
-CACHE_URL_BASE = 'https://huggingface.co/pharma/ci-preprocess/resolve/main/'
+CACHE_URL_BASE = 'https://huggingface.co/pharmapsychotic/ci-preprocess/resolve/main/'
 
 
 @dataclass 

@@ -1,0 +1,37 @@
+bundled_packages_dir: packages
+data_dir: data
+description: null
+environment_variables: {}
+examples_filename: examples.yaml
+external_package_dirs:
+  - ../clip_interrogator
+input_type: Any
+live_reload: false
+model_class_filename: model.py
+model_class_name: Model
+model_framework: custom
+model_metadata: {}
+model_module_dir: model
+model_name: null
+model_type: custom
+python_version: py39
+requirements:
+  - torch
+  - torchvision
+  - Pillow
+  - requests
+  - safetensors
+  - tqdm
+  - open_clip_torch
+  - accelerate
+  - transformers>=4.27.1
+resources:
+  cpu: 7500m
+  memory: 15Gi
+  use_gpu: true
+  accelerator: A10G
+secrets: {}
+spec_version: "2.0"
+system_packages:
+  - libgl1-mesa-glx
+  - libglib2.0-0

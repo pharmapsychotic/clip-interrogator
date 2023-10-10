@@ -1,3 +1,5 @@
+# python run_cli.py -f /data/hdd1/shiym/competition/GitHubClone/diffusers/examples/custom_diffusion/real_reg/samples_girl/images -c ViT-L-14/openai -d cuda -m best
+
 #!/usr/bin/env python3
 import argparse
 import csv
@@ -73,7 +75,8 @@ def main():
             print(f'The folder {args.folder} does not exist!')
             exit(1)
 
-        files = [f for f in os.listdir(args.folder) if f.endswith('.jpg') or  f.endswith('.png')]
+
+        files = sorted([f for f in os.listdir(args.folder) if f.endswith('.jpg') or  f.endswith('.png')])
         prompts = []
         for file in files:
             image = Image.open(os.path.join(args.folder, file)).convert('RGB')
@@ -81,15 +84,20 @@ def main():
             prompts.append(prompt)
             print(prompt)
 
-        if len(prompts):
-            csv_path = os.path.join(args.folder, 'desc.csv')
-            with open(csv_path, 'w', encoding='utf-8', newline='') as f:
-                w = csv.writer(f, quoting=csv.QUOTE_MINIMAL)
-                w.writerow(['image', 'prompt'])
-                for file, prompt in zip(files, prompts):
-                    w.writerow([file, prompt])
+        # 写入到本地文件 caption.txt 中
+        with open("/data/hdd1/shiym/competition/GitHubClone/diffusers/examples/custom_diffusion/real_reg/samples_girl/caption.txt", "w", encoding="utf-8") as f:
+            for prompt in prompts:
+                f.write(prompt + "\n")
 
-            print(f"\n\n\n\nGenerated {len(prompts)} and saved to {csv_path}, enjoy!")
+        # if len(prompts):
+        #     csv_path = os.path.join(args.folder, 'desc.csv')
+        #     with open(csv_path, 'w', encoding='utf-8', newline='') as f:
+        #         w = csv.writer(f, quoting=csv.QUOTE_MINIMAL)
+        #         w.writerow(['image', 'prompt'])
+        #         for file, prompt in zip(files, prompts):
+        #             w.writerow([file, prompt])
+
+        #     print(f"\n\n\n\nGenerated {len(prompts)} and saved to {csv_path}, enjoy!")
 
 if __name__ == "__main__":
     main()

@@ -73,7 +73,7 @@ def main():
             print(f'The folder {args.folder} does not exist!')
             exit(1)
 
-        files = [f for f in os.listdir(args.folder) if f.endswith('.jpg') or  f.endswith('.png')]
+        files = [f for f in os.listdir(args.folder) if f.endswith('.jpg') or f.endswith('.png') or f.endswith('webp')]
         prompts = []
         for file in files:
             image = Image.open(os.path.join(args.folder, file)).convert('RGB')
